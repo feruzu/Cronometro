@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FDFCFB;
+    font-size: 35px;
+    font-family: 'Aldrich', sans-serif;
+}
+
+.container {
+    user-select: none;
+}
+
+.container .tiempo {
+height: 100px;
+width: 100px;
+border-radius: 50%;
+background: linear-gradient(145deg, #e4e3e2, #ffffff);
+box-shadow:  20px 20px 60px #d7d6d5,
+             -20px -20px 60px #ffffff;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 160px;
+}
+
+.container .tiempo span {
+    padding: 5px;
+}
+
+
