@@ -9,7 +9,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #e9e9e9;
+    background: #ececec;
     font-size: 35px;
     font-family: 'Aldrich', sans-serif;
 
@@ -23,10 +23,8 @@ body {
     height: 100px;
     width: 100px;
     border-radius: 50%;
-    background: linear-gradient(145deg, #ffffff, #e4e3e2);
-    box-shadow: 20px 20px 60px #d7d6d5,
-        -20px -20px 60px #ffffff;
-
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.55),
+    10px 10px 15px rgba(70, 70, 70, 0.12);
     padding: 150px;
 }
 
