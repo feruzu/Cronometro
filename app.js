@@ -1,6 +1,7 @@
 let botonStart = document.querySelector(".start");
 let botonPause = document.querySelector(".pause");
 let botonReset = document.querySelector(".reset");
+let circulo = document.querySelector(".circulo");
 
 let hora = (min = seg = "0" + 0),
   startTiempo;
@@ -11,6 +12,8 @@ botonReset.addEventListener("click", reset);
 
 function start() {
   botonStart.classList.add("active");
+  circulo.classList.add("circulo-activo");
+  circulo.classList.remove("circulo-reinicia");
   botonStart.classList.remove("stopActive");
   botonPause.classList.remove("stopActive");
 
@@ -35,13 +38,14 @@ function start() {
 function pause() {
   botonStart.classList.remove("active");
   botonPause.classList.add("stopActive");
-
+  circulo.classList.remove("circulo-activo");
   clearInterval(startTiempo);
 }
 
 function reset() {
   botonStart.classList.remove("active");
   botonPause.classList.remove("stopActive");
+  circulo.classList.add("circulo-reinicia");
 
   clearInterval(startTiempo);
   (hora = min = seg = "0" + 0), cronometro();
