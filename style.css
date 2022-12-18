@@ -12,7 +12,16 @@ body {
     background: #ececec;
     font-size: 35px;
     font-family: 'Aldrich', sans-serif;
+}
 
+.container-principal {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #d4d4d4, #fdfdfd);
+    box-shadow:  18px 18px 36px #bdbdbd,
+             -18px -18px 36px #ffffff;
+    padding: 25px;
+    border: 4px solid #ececec;
 }
 
 .container {
@@ -23,9 +32,10 @@ body {
     height: 100px;
     width: 100px;
     border-radius: 50%;
-    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.55),
-    10px 10px 15px rgba(70, 70, 70, 0.12);
-    padding: 150px;
+    background: linear-gradient(145deg, #fdfdfda2, #d4d4d4);
+box-shadow:  18px 18px 36px #bdbdbd,
+             -18px -18px 36px #ffffff;
+    padding: 147px;
 }
 
 .container .tiempo {
@@ -40,10 +50,8 @@ body {
 }
 
 .container .tiempo span.seg {
-    color: #F88AB0;
-    text-shadow: #F88AB0 1px 0 10px;
+    color: #FD1F4A;
 }
-
 
 img {
     width: 30px;
@@ -71,16 +79,43 @@ button.stopActive {
     background: linear-gradient(145deg, #e6e6e6, #ffffff);
     box-shadow: 20px 20px 60px #d9d9d9,
         -20px -20px 60px #ffffff;
-    cursor: not-allowed;
+    pointer-events: none;
 }
 
 button.active>img,
 button.stopActive>img,
 button:active>img {
-    filter: invert(87%) sepia(24%) saturate(5208%) hue-rotate(292deg) brightness(100%) contrast(95%);
+    pointer-events: none;
+    filter: invert(30%) sepia(95%) saturate(5450%) hue-rotate(337deg) brightness(100%) contrast(99%);
 }
 
 .container .botones {
     display: flex;
     margin-top: 25px;
 }
+
+.circulo {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(180deg, hsla(348, 100%, 73%, 1) 0%, hsla(348, 98%, 56%, 1) 53%, hsla(348, 76%, 43%, 1) 100%);
+    border-radius: 50%;
+    left: calc(50% - 10px);
+    top: calc(50% - 10px);
+    animation: rotar 60s linear infinite;
+    animation-play-state: paused;
+}
+
+.circulo-activo {
+    animation: rotar 60s linear infinite;
+}
+
+.circulo-reinicia {
+    animation: initial;
+    transform: rotate(-90deg) translateX(160px);
+}
+
+  @keyframes rotar {
+    from { transform: rotate(-90deg) translateX(160px); }
+    to { transform: rotate(270deg) translateX(160px); }
+}    
